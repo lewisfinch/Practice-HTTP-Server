@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Weekly Schedule</title>
+    <link rel="stylesheet" href="resources\css\style.css">
+    <script src="resources\js\MyScheduleJs.js"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKV_ZWS2vXsELohIbIxE_Liqf0msc0W2U&libraries=places&callback=initMap">
+        </script>
+</head>
+
+
+
+
+
+<body class="gray">
+    <nav><a href="MySchedule.html">My Schedule</a>
+        <a href="MyForm.html">Form Input</a>
+        <a href="AboutMe.html">About Me</a>
+    </nav>
+    <h1>My Schedule</h1>
+    <div id="container">
+        <table class="schedule">
+            <tr class="purple">
+                <th>Day</th>
+                <th>Event</th>
+                <th>Time</th>
+                <th>Event Location(Virtual or Physical)</th>
+                <th>Phone Number</th>
+                <th>URL</th>
+            </tr>
+            <tr class="white" onmouseover="chgimg('resources/images/anderson.jpg', 'Anderson')">
+                <td class="day">Monday</td>
+                <td class="event">CSCI 4707 Lecture</td>
+                <td class="time">9:45-11:00AM</td>
+                <td class="location">Anderson Hall, 257 19th Avenue S Minneapolis, MN 55455
+                    <img src="resources/images/anderson.jpg" alt="Anderson">
+                </td>
+                <td>No Phone Number</td>
+                <td><a href="http://www.spatial.cs.umn.edu/Courses/Spring23/4707">CSCI 4707 Info</a></td>
+            </tr>
+            <tr class="purple" onmouseover="chgimg('resources/images/anderson.jpg', 'Anderson')">
+                <td>Monday</td>
+                <td>CSCI 4511W Lecture</td>
+                <td>2:30-3:45PM</td>
+                <td>Anderson Hall, 257 19th Avenue S Minneapolis, MN 55455
+                    <img src="resources/images/anderson.jpg" alt="Anderson">
+                </td>
+                <td>No Phone Number</td>
+                <td><a href="https://canvas.umn.edu/courses/355377">CSCI 4511W Info</a></td>
+            </tr>
+            <tr class="white" onmouseover="chgimg('resources/images/Amundson.jpg', 'Amundson')">
+                <td class="day">Tuesday</td>
+                <td class="event">CSCI 3081W Lecture</td>
+                <td class="time">11:15-12:30PM</td>
+                <td class="location">Amundson Hall, 421 Washington Avenue Se Minneapolis, MN 55455
+                    <img src="resources/images/Amundson.jpg" alt="Amundson">
+                </td>
+                <td>No Phone Number</td>
+                <td><a href="https://canvas.umn.edu/courses/354981">CSCI 3081W Info</a></td>
+            </tr>
+            <tr class="purple" onmouseover="chgimg('resources/images/keller.jpg', 'Keller')">
+                <td class="day">Tuesday</td>
+                <td class="event">CSCI 5105 Lecture</td>
+                <td class="time">2:30-3:45PM</td>
+                <td class="location">Keller Hall, 200 Union Street Se Minneapolis, MN 55455
+                    <img src="resources/images/keller.jpg" alt="Keller">
+                </td>
+                <td>No Phone Number</td>
+                <td><a href="https://canvas.umn.edu/courses/355268">CSCI 5105 Info</a></td>
+            </tr>
+            <tr class="white" onmouseover="chgimg('resources/images/Lind.jpg', 'Lind')">
+                <td class="day">Tuesday</td>
+                <td class="event">CSCI 4131 Lecture</td>
+                <td class="time">4:00-6:30PM</td>
+                <td class="location">Lind Hall, 207 Church Street Se Minneapolis, MN 55455
+                    <img src="resources/images/Lind.jpg" alt="Lind">
+                </td>
+                <td>No Phone Number</td>
+                <td><a href="https://canvas.umn.edu/courses/355467">CSCI 4131 Info</a></td>
+            </tr>
+            <tr class="purple" onmouseover="chgimg('resources/images/anderson.jpg', 'Anderson')">
+                <td>Wednesday</td>
+                <td>CSCI 4707 Lecture</td>
+                <td>9:45-11:00AM</td>
+                <td>Anderson Hall, 257 19th Avenue S Minneapolis, MN 55455
+                    <img src="resources/images/anderson.jpg" alt="Anderson">
+                </td>
+                <td>No Phone Number</td>
+                <td><a href="http://www.spatial.cs.umn.edu/Courses/Spring23/4707">CSCI 4707 Info</a></td>
+            </tr>
+            <tr class="white" onmouseover="chgimg('resources/images/anderson.jpg', 'Anderson')">
+                <td>Wednesday</td>
+                <td>CSCI 4511W Lecture</td>
+                <td>2:30-3:45PM</td>
+                <td>Anderson Hall, 257 19th Avenue S Minneapolis, MN 55455
+                    <img src="resources/images/anderson.jpg" alt="Anderson">
+                </td>
+                <td>No Phone Number</td>
+                <td><a href="https://canvas.umn.edu/courses/355377">CSCI 4511W Info</a></td>
+            </tr>
+            <tr class="purple" onmouseover="chgimg('resources/images/Amundson.jpg', 'Amundson')">
+                <td>Thursday</td>
+                <td>CSCI 3081W Lecture</td>
+                <td>11:15-12:30PM</td>
+                <td>Amundson Hall, 421 Washington Avenue Se Minneapolis, MN 55455
+                    <img src="resources/images/Amundson.jpg" alt="Amundson">
+                </td>
+                <td>No Phone Number</td>
+                <td><a href="https://canvas.umn.edu/courses/354981">CSCI 3081W Info</a></td>
+            </tr>
+            <tr class="white" onmouseover="chgimg('resources/images/keller.jpg', 'Keller')">
+                <td>Thursday</td>
+                <td>CSCI 5105 Lecture</td>
+                <td>2:30-3:45PM</td>
+                <td>Keller Hall, 200 Union Street Se Minneapolis, MN 55455
+                    <img src="resources/images/keller.jpg" alt="Keller">
+                </td>
+                <td>No Phone Number</td>
+                <td><a href="https://canvas.umn.edu/courses/355268">CSCI 5105 Info</a></td>
+            </tr>
+            <tr class="purple" onmouseover="chgimg('resources/images/keller.jpg', 'Keller')">
+                <td>Friday</td>
+                <td>CSCI 3081W Laboratory</td>
+                <td>8:00-8:50AM</td>
+                <td>Keller Hall, 200 Union Street Se Minneapolis, MN 55455
+                    <img src="resources/images/keller.jpg" alt="Keller">
+                </td>
+                <td>No Phone Number</td>
+                <td><a href="https://canvas.umn.edu/courses/354981">CSCI 3081W Info</a></td>
+            </tr>
+            <tr class="white" onmouseover="chgimg('resources/images/Link.jpg', 'Link')">
+                <td class="day">Saturday</td>
+                <td class="event">Watch TV Series</td>
+                <td class="time">7:30-9:00PM</td>
+                <td class="location">2900 4th St SE Minneapolis, MN 55414
+                    <img src="resources/images/Link.jpg" alt="Link">
+                </td>
+                <td>(612)416-3152</td>
+                <td><a href="https://www.netflix.com/">TV Series Info</a></td>
+            </tr>
+            <tr class="purple" onmouseover="chgimg('resources/images/Fresh.jpg', 'Fresh')">
+                <td class="day">Sunday</td>
+                <td class="event">Go Shopping</td>
+                <td class="time">7:00-7:30AM</td>
+                <td class="location">24 30th Ave SE, Minneapolis, MN 55414
+                    <img src="resources/images/Fresh.jpg" alt="Fresh">
+                </td>
+                <td>(651)846-0908</td>
+                <td><a href="https://www.freshthyme.com/store-location/minneapolis-prospect-park-minnesota-55414/">Fresh
+                        Thyme Info</a></td>
+            </tr>
+        </table>
+
+        <div>
+            <button id="button" onclick="fadeImage()">Go away!</button>
+        </div>
+        <div id="imgDiv">
+            <img id="image" alt="gopher" src="resources/images/gophers-mascot.png" width="448" height="314">
+        </div>
+    </div>
+
+    <div id="mapSev">
+        <div id="directionsPanel"></div>
+        <div id="map"></div>
+        <div id="panel">
+            <div id="searchPanel">
+                <div class="panelIco">
+                    <img class="ico" src="resources/images/search.png" alt="Search">
+                </div>
+                <div>
+                    <p>
+                        <label for="placeType">Find</label>
+                        <select name="placeType" id="placeType" onclick="changeDisable()">
+                            <option value="restaurant">restaurant</option>
+                            <option value="hospital">hospital</option>
+                            <option value="parking">parking</option>
+                            <option value="supermarket">supermarket</option>
+                            <option value="other">other</option>
+                        </select>
+                    </p>
+                    <p>
+                        <input type="text" name="other" id="other" placeholder="Enter other Places" disabled><br>
+                    </p>
+                    <p>
+                        <label for="radius">In</label>
+                        <input type="text" name="radius" id="radius"> meter
+                    </p>
+                    <p>
+                        <button id="searchButton" onclick="getLocation()">Search</button>
+                    </p>
+                </div>
+            </div>
+            <div id="directionPanel">
+                <div class="panelIco">
+                    <img class="ico" src="resources/images/direction.png" alt="Direction">
+                </div>
+                <div>
+                    <p>
+                        <label for="to">Directions to</label>
+                        <input type="text" name="to" id="to"><br>
+                        by
+                    </p>
+
+                    <div>
+                        <label for="walk">WALK</label>
+                        <input type="radio" name="movement" value="walk" id="walk">
+                    </div>
+                    <div>
+                        <label for="drive">DRIVE</label>
+                        <input type="radio" name="movement" value="drive" id="drive">
+                    </div>
+                    <div>
+                        <label for="trans">TRANS</label>
+                        <input type="radio" name="movement" value="trans" id="trans">
+                    </div>
+
+                    <p>
+                        <button id="goButton" onclick="goto()">Go</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

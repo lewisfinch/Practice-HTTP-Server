@@ -1,0 +1,276 @@
+#aboutMePage {
+    display: grid;
+    grid-template-areas:
+        "head head head"
+        "h2 emp emp"
+        "a b c"
+        "d e f";
+}
+
+#myFormPage {
+    display: grid;
+    grid-template-areas:
+        "head head head head head"
+        "a b c d e";
+    align-content: start;
+    gap: 5% 2%
+}
+
+
+
+nav {
+    padding: 10px;
+    background: linear-gradient(blue, black);
+    border: 2px solid white;
+    grid-area: head;
+}
+
+nav a {
+    color: white;
+    padding: 10px;
+}
+
+.gray {
+    background-color: rgb(95, 94, 94);
+}
+
+#myform {
+    font: 17px Arial;
+    background-color: #e2e2e2;
+    padding: 10px;
+    text-align: center;
+    grid-area: c;
+}
+
+#myform label {
+    width: 250px;
+    text-align: left;
+    display: inline-block;
+}
+
+#myform input[type=text],
+#myform input[type=time],
+#myform input[type=tel],
+#myform input[type=url],
+#myform select {
+    box-sizing: border-box;
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+}
+
+#myform input[type=submit],
+#myform input[type=reset] {
+    width: 200px;
+    color: white;
+    padding: 15px;
+    margin: 10px 22px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#myform input[type=reset] {
+    background-color: rgb(209, 187, 60);
+}
+
+#myform input[type=submit] {
+    background-color: rgb(64, 173, 91);
+}
+
+#myform input[type=submit]:hover {
+    background-color: rgb(41, 116, 26);
+}
+
+#myform input[type=reset]:hover {
+    background-color: rgb(163, 154, 31);
+}
+
+
+
+.schedule,
+.schedule th,
+.schedule td {
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+.purple {
+    background-color: rgb(222, 212, 248);
+}
+
+.white {
+    background-color: white;
+}
+
+#container {
+    display: flex;
+}
+
+.white img {
+    display: none;
+}
+
+.purple img {
+    display: none;
+}
+
+h1 {
+    color: white;
+}
+
+.white:hover img {
+    display: block;
+    height: 50px;
+    width: 80px;
+}
+
+.purple:hover img {
+    display: block;
+    height: 50px;
+    width: 80px;
+}
+
+
+iframe {
+    border-width: 0px;
+}
+
+#info {
+    width: 400px;
+    text-align: center;
+}
+
+#cal {
+    width: 200px;
+    padding: 20px;
+    background-color: rgb(111, 202, 69);
+    border: 1px solid black;
+    grid-area: c;
+}
+
+#cal p {
+    font-size: large;
+    padding: 15px;
+    text-shadow: 2px 2px yellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+#button {
+    margin-left: 10px;
+}
+
+#image {
+    opacity: 1;
+    padding: 100px;
+}
+
+#map {
+    height: 400px;
+    width: 1400px;
+}
+
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.ico {
+    height: 70px;
+    width: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#searchPanel {
+    background-color: rgb(222, 212, 248);
+    display: grid;
+    grid-template-areas:
+        "a b";
+}
+
+#directionPanel {
+    background-color: white;
+    display: grid;
+    grid-template-areas:
+        "a b";
+}
+
+#other {
+    width: 150px;
+}
+
+#radius {
+    width: 60px;
+}
+
+#to {
+    width: 120px;
+    margin-right: 10px;
+}
+
+#directionsPanel {
+    float: left;
+    background-color: white;
+    overflow: auto;
+    height: 400px;
+}
+
+#formMap {
+    height: 80%;
+    width: 200%;
+    grid-area: d;
+}
+
+.myInfo,
+.myInfo td,
+.myInfo tr {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+
+#am_topleft {
+    grid-area: a;
+}
+
+#vid {
+    grid-area: d;
+}
+
+#ins {
+    grid-area: f;
+}
+
+#am_title {
+    grid-area: h2;
+}
+
+#mapSev {
+    display: flex;
+    margin-top: 2%;
+}
+
+#panel {
+    display: grid;
+}
+
+.panelIco {
+    grid-area: a;
+    display: grid;
+    align-items: center;
+}
+
+#tempForm,
+#tempForm th,
+#tempForm td {
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 10px;
+}

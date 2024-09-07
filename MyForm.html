@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyForm</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+    <script src="resources/js/MyFormJs.js"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKV_ZWS2vXsELohIbIxE_Liqf0msc0W2U&libraries=places&callback=initMap"></script>
+</head>
+
+<body class="gray" id="myFormPage">
+
+    <nav><a href="MySchedule.html">My Schedule</a>
+        <a href="MyForm.html">Form Input</a>
+        <a href="AboutMe.html">About Me</a>
+    </nav>
+    <form id="myform" method="POST">
+        <p>
+            <label for="event">Event</label>
+            <input type="text" name="event" id="event" pattern="[a-zA-Z0-9 ]+" required>
+        </p>
+
+        <p>
+            <label for="day">Day of Week</label>
+            <select name="day" id="day">
+                <option value="Sun">Sun</option>
+                <option value="Mon">Mon</option>
+                <option value="Tue">Tue</option>
+                <option value="Wed">Wed</option>
+                <option value="Thu">Thu</option>
+                <option value="Fri">Fri</option>
+                <option value="Sat">Sat</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="start">Start</label>
+            <input type="time" name="start" id="start" required>
+        </p>
+
+        <p>
+            <label for="end">End</label>
+            <input type="time" name="end" id="end" required>
+        </p>
+
+        <p>
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone" required>
+        </p>
+
+        <p>
+            <label for="location">Location</label>
+            <input type="text" name="location" id="location" required>
+        </p>
+
+        <p>
+            <label for="extra">Extra Info</label>
+            <input type="text" name="extra" id="extra" required>
+        </p>
+
+        <p>
+            <label for="url">Enter URL for the Extra Info</label>
+            <input type="url" name="url" id="url" required>
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear">
+        </p>
+    </form>
+
+    <div id="formMap"></div>
+
+
+</body>
+
+</html>
